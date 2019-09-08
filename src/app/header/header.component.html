@@ -1,1 +1,41 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row >
+      <div class="search">
+  
+        <mat-form-field class="example-form-field">
+          <input
+          matInput
+          type="text"
+          placeholder="search"
+          />
+          <button 
+          mat-button
+          *ngIf="value"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="value = ''"
+          >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <button mat-raised-button color="accent">Search</button>
+    </div>
+      
+      <mat-form-field>
+        <mat-label>domaine</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let domaine of domaines" [value]="domaine">
+            {{domaine}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <span class="example-spacer"></span>
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(value)]="viewOption">
+        <mat-button-toggle value="list" >list view</mat-button-toggle>
+        <mat-button-toggle value="card">card view</mat-button-toggle>
+      </mat-button-toggle-group>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  

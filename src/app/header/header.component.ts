@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  value = '';
+  viewOption;
+  domaines = ['art', 'comedy', 'action'];
+
   constructor() { }
 
   ngOnInit() {

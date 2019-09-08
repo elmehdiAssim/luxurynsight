@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { NewsItemComponent } from './news/news-item/news-item.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsModalComponent } from './news/news-modal/news-modal.component';
+import { MaterialModule } from './material/material.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { NewsModalComponent } from './news/news-modal/news-modal.component';
     HeaderComponent,
     NewsItemComponent,
     NewsListComponent,
-    NewsModalComponent
+    NewsModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
