@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   page = 1;
   hitsPerPage = 15;
   nbHits;
+  defaultPhoto = 'https://www.luxurynsight.com/podcasts/images/logo-1200px.png';
   constructor(private service: CallsService) { }
   ngOnInit(): void {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.

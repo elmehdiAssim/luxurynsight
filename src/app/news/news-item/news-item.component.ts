@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NewsItemComponent implements OnInit {
   @Input()
   piece;
+  @Input()
+  defaultPhoto;
 
   constructor() { }
 

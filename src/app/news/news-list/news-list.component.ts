@@ -10,6 +10,8 @@ export class NewsListComponent implements OnInit {
 
   @Input()
   news;
+  @Input()
+  defaultPhoto;
   constructor() { }
 
   ngOnInit() {
