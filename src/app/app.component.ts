@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
   title = 'luxurynsight';
   viewOption = 'card';
-  
   news;
   page = 1;
   hitsPerPage = 15;

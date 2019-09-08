@@ -1,5 +1,5 @@
 <app-header [viewOption]="viewOption" (toggleView)="onToggleView()"></app-header>
-<app-news-list [news]="news" [defaultPhoto]="defaultPhoto" [viewOption]="viewOption" ></app-news-list>
+<app-news-list [class]="viewOption" [news]="news" [defaultPhoto]="defaultPhoto" [viewOption]="viewOption" ></app-news-list>
 <router-outlet></router-outlet>
 <mat-paginator [length]="nbHits"
               [pageSize]="hitsPerPage">
