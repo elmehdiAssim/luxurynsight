@@ -10,6 +10,8 @@ export class NewsItemComponent implements OnInit {
   piece;
   @Input()
   defaultPhoto;
+  @Input()
+  viewOption;
 
   constructor() { }
 

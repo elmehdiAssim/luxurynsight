@@ -32,7 +32,7 @@
       </mat-form-field>
       
       <span class="example-spacer"></span>
-      <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(value)]="viewOption">
+      <mat-button-toggle-group name="viewOption" aria-label="View option" (ngModelChange)="onToggleView()" [(ngModel)]="viewOption">
         <mat-button-toggle value="list" >list view</mat-button-toggle>
         <mat-button-toggle value="card">card view</mat-button-toggle>
       </mat-button-toggle-group>

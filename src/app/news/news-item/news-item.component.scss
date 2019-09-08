@@ -15,6 +15,7 @@
     flex-direction: row;
   }
   mat-card {
+      width: 100%;
     padding: 0;
     height: 150px;
     margin: 5px;
@@ -31,4 +32,33 @@
 }
 .left-margin {
   margin-left: 10px;
+}
+.card{
+    mat-card{
+        width: 240px;
+        overflow: hidden;
+        height: 300px;
+    }
+    img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        //   margin: 16px !important;
+        // margin: 0 20px 0 0 !important;
+        margin: 0 auto;
+        border-radius: 5px !important;
+      }
+      mat-card-content {
+        display: flex;
+        flex-direction: column;
+      }
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .tags {
+          display: none;
+      }
+
 }

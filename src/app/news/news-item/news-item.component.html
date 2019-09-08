@@ -1,17 +1,23 @@
-<mat-card class="list">
+<div [class]="viewOption">
+  <mat-card>
     <mat-card-content>
-            <img mat-card-image [src]="piece.previewImage||defaultPhoto"  alt={{piece.name}} >
-            <div class="card-content">
-
-                <h1>{{piece.name}}</h1>
-                <div>
-                  <span >{{piece.domain }}</span>
-                  <span class="left-margin" >{{piece.releasedAt | date: 'dd/MM/yyyy' }}</span>
-                </div>
-                <button mat-raised-button >open dialog</button>
-                <mat-chip-list class="tags">
-                        <mat-chip  *ngFor="let tag of piece._tags"  >{{tag.name}}</mat-chip>
-                      </mat-chip-list>
-            </div>
-        </mat-card-content>
-      </mat-card>
+      <img
+        mat-card-image
+        [src]="piece.previewImage || defaultPhoto"
+        alt="{{ piece.name }}"
+      />
+      <div class="card-content">
+        <h1>{{ piece.name }}</h1>
+        <div>
+          <span>{{ piece.domain }}</span>
+          <span class="left-margin">{{
+            piece.releasedAt | date: "dd/MM/yyyy"
+          }}</span>
+        </div>
+        <mat-chip-list class="tags">
+          <mat-chip *ngFor="let tag of piece._tags">{{ tag.name }}</mat-chip>
+        </mat-chip-list>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -10,6 +10,7 @@ import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsModalComponent } from './news/news-modal/news-modal.component';
 import { MaterialModule } from './material/material.module';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

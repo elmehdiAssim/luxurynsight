@@ -1,3 +1,8 @@
-<app-news-item *ngFor="let piece of news" [piece]="piece" [defaultPhoto]="defaultPhoto"> 
- 
+<app-news-item
+[class]="viewOption"
+  *ngFor="let piece of news"
+  [piece]="piece"
+  [defaultPhoto]="defaultPhoto"
+  [viewOption]="viewOption" 
+>
 </app-news-item>

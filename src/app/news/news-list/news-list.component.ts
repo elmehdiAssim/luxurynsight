@@ -12,6 +12,8 @@ export class NewsListComponent implements OnInit {
   news;
   @Input()
   defaultPhoto;
+  @Input()
+  viewOption;
   constructor() { }
 
   ngOnInit() {

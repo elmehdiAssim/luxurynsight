@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵSWITCH_VIEW_CONTAINER_REF_FACTORY__POST_R3__ } from '@angular/core';
 import { CallsService } from './calls.service';
 import { Observable } from 'rxjs';
 
@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'luxurynsight';
-  viewOption = 'list';
+  viewOption = 'card';
+  
   news;
   page = 1;
   hitsPerPage = 15;
@@ -31,5 +32,14 @@ export class AppComponent implements OnInit {
       });
       this.news = news.hits;
     });
+  }
+
+
+  onToggleView() {
+    this.switchView();
+  }
+  switchView() {
+    const viewOptions = ['list', 'card'];
+    this.viewOption === viewOptions[0] ? this.viewOption = viewOptions[1] : this.viewOption = viewOptions[0];
   }
 }
