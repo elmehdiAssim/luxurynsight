@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   page = 1;
   hitsPerPage = 15;
   nbHits;
+  maxTagsNumber = 2;
   defaultPhoto = 'https://www.luxurynsight.com/podcasts/images/logo-1200px.png';
   constructor(private service: CallsService) { }
   ngOnInit(): void {
@@ -28,6 +29,10 @@ export class AppComponent implements OnInit {
             return tag;
           }
         });
+        // limiting the tags number to two
+        if (e._tags.length > this.maxTagsNumber){
+          e._tags.length = this.maxTagsNumber;
+           }
       });
       this.news = news.hits;
     });
