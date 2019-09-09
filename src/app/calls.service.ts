@@ -52,4 +52,20 @@ export class CallsService {
     }
     });
   }
+
+  getDomains() {
+    return this.http.post(`${this.apiUrl}/query`,
+      JSON.stringify({
+        /* On this example, we don't need any “hits” result, because we use another feature: The facets! See below. */
+        hitsPerPage: 0,
+        facets: 'domain'
+      }),
+      { headers: {
+        'x-algolia-key': this.apiKey
+      }
+      }
+    )
+}
+
+
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { CallsService } from '../calls.service';
 
 @Component({
   selector: 'app-header',
@@ -14,11 +15,17 @@ export class HeaderComponent implements OnInit {
   @Output()
   toggleView = new EventEmitter();
 
-  domaines = ['art', 'comedy', 'action'];
+  domaines;
 
-  constructor() { }
+  constructor(private service: CallsService) { }
 
   ngOnInit() {
+    this.service.getDomains().subscribe((domaines: any) => {
+    this.domaines = domaines.facets.domain
+    console.log(domaines);
+    })
+
+
   }
 
   onToggleView() {
